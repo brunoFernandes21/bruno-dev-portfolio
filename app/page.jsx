@@ -4,18 +4,21 @@ import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
 import { AiFillProject, AiFillFolder } from "react-icons/ai";
 import { GrTechnology } from "react-icons/gr";
+import { BsFillArrowUpCircleFill } from "react-icons/bs";
 import code from "/public/images/monitor_coding_2.png";
 import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+
 export default function Home() {
   return (
-    <main className="scroll-smooth">
+    <main className="main__container scroll-smooth">
       <section
         id="home"
-        className="min-h-screen relative px-10 md:px-20 lg:px-40"
+        className="min-h-screen px-5 md:px-20 lg:px-40 bg-slate-100"
       >
         <nav className={`py-8 flex justify-between border-b-2`}>
           <p className="logo text-slate-800 font-black text-3xl">Bruno_Dev</p>
-          <ul className=" links flex items-center gap-2 ">
+          <ul className=" links hidden md:flex items-center gap-2 ">
             <li className="link px-2 cursor-pointer font-black text-xl text-slate-800 transition duration-150 ease-in-out hover:text-slate-600 hover:border-b-2 hover:border-b-slate-800 ">
               <a href="#skills">
                 <span>Skills</span>
@@ -27,15 +30,18 @@ export default function Home() {
               </a>
             </li>
             <li className="px-2 cursor-pointer font-black text-xl text-slate-800 transition duration-150 ease-in-out hover:text-slate-600 hover:border-b-2 hover:border-b-slate-800 ">
-              <a href="#code">
-                <span>Code</span>
-              </a>
+              <Link
+                href="https://docs.google.com/document/d/1JZNQOT2RCbmeD0BAp8UvmMoBizHL5-_VjqewAAtfaec/edit?usp=sharing"
+                target="_blank"
+              >
+                CV
+              </Link>
             </li>
-            <li className="px-2 cursor-pointer font-black text-xl text-slate-800 transition duration-150 ease-in-out hover:text-slate-600 hover:border-b-2 hover:border-b-slate-800 ">
+            {/* <li className="px-2 cursor-pointer font-black text-xl text-slate-800 transition duration-150 ease-in-out hover:text-slate-600 hover:border-b-2 hover:border-b-slate-800 ">
               <a href="#softSkills">
                 <span>Soft Skills</span>
               </a>
-            </li>
+            </li> */}
           </ul>
 
           <ul className="socials flex items-center">
@@ -54,7 +60,7 @@ export default function Home() {
         </nav>
 
         <div className="text-center mt-5">
-          <h1 className="text-5xl py-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-700 font-black md:text-6xl">
+          <h1 className="text-5xl mt-10 py-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-700 font-black md:text-6xl">
             Bruno Fernandes
           </h1>
           <h3 className="text-2xl pt-3 text-slate-800 font-medium md:text-3xl">
@@ -66,7 +72,7 @@ export default function Home() {
             technology.
             <br />
           </p>
-          <p>
+          <p className="mt-10">
             <strong>
               <a
                 href="#skills"
@@ -84,7 +90,7 @@ export default function Home() {
 
       <section
         id="skills"
-        className="min-h-screen pt-4 px-10 md:px-20 lg:px-40 bg-slate-800 w-full"
+        className="min-h-screen pt-4 px-5 md:px-20 lg:px-40 bg-slate-800 w-full relative"
       >
         <div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl pb-2 font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-500">
@@ -95,12 +101,17 @@ export default function Home() {
             development world. From Backend to Frontend.
           </p>
           <Skills />
+          <div className="back__to_top absolute hidden md:block bottom-6 right-4">
+            <a href="#home">
+              <BsFillArrowUpCircleFill className="text-slate-100 text-4xl cursor-pointer hover:scale-125 transition ease-linear" />
+            </a>
+          </div>
         </div>
       </section>
 
       <section
         id="projects"
-        className="min-h-screen pt-4 px-10 md:px-20 lg:px-40"
+        className=" relative min-h-screen pt-4 px-5 md:px-20 lg:px-40 bg-slate-100"
       >
         <div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl pb-5 font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-800">
@@ -113,23 +124,29 @@ export default function Home() {
             </span>
           </p>
         </div>
-        {/* <Projects/> */}
+        <Projects/>
+
+        <div className="back__to_top absolute hidden md:block bottom-6 right-4">
+          <a href="#home">
+            <BsFillArrowUpCircleFill className=" text-4xl cursor-pointer hover:scale-125 transition ease-linear" />
+          </a>
+        </div>
       </section>
 
-      <section
+      {/* <section
         id="code"
         className="min-h-screen pt-4 px-10 md:px-20 lg:px-40 bg-slate-800 w-full"
       >
         <h2 className="text-2xl md:text-3xl lg:text-4xl pb-2 font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-500">
           Code
         </h2>
-      </section>
+      </section> */}
 
-      <section id="softSkills" className="min-h-screen pt-4 px-10 md:px-20 lg:px-40 w-full">
+      {/* <section id="softSkills" className="min-h-screen pt-4 px-10 md:px-20 lg:px-40 w-full bg-slate-100">
         <h2 className="text-2xl md:text-3xl lg:text-4xl pb-5 font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-800">
           Soft Skills
         </h2>
-      </section>
+      </section> */}
     </main>
   );
 }
