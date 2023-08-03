@@ -16,7 +16,7 @@ const Projects = () => {
     <main className="md:flex md:justify-center gap-10 flex-wrap">
       {projects.map((project) => (
         <section key={project.title} className="text-center bg-gray-800 shadow-md shadow-gray-700 transition-shadow hover:shadow-md hover:shadow-white rounded-xl my-10  max-w-md">
-          <Image className="mx-auto rounded-t-md" src={project.image} width="500" height="500" alt="A picture of northcoders news homepage" />
+          <Image className="mx-auto rounded-t-md" src={project.image} width={500} height={500}  alt="A picture of northcoders news homepage" />
         <section className="px-10 pb-10">
           <p className="text-3xl md:text-4xl font-black pt-5 pb-2 text-transparent bg-clip-text bg-gradient-to-r  from-white to-blue-500">
             <span>{project.title}</span>

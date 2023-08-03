@@ -1,5 +1,4 @@
 "use client"
-import {useState} from 'react'
 import { FaReact } from "react-icons/fa"
 import { FaDatabase } from "react-icons/fa"
 
@@ -12,17 +11,15 @@ const data = [
     {
         icon: <FaDatabase className='mx-auto text-white text-4xl md:text-5xl lg:text-6xl'/>,
         title: "Back-End",
-        techList: ["Node", "Express",  "Firebase", "MongoDb", "PostGres", "Jest"]
+        techList: ["Node", "Express",  "Firebase", "MongoDb", "PostgreSQL", "Jest"]
     }
 ]
 
 const Skills = () => {
-
-    const [skills, setSkills] = useState(data)
     
   return (
     <main className='text-slate-100 m-auto md:flex md:justify-center gap-10 flex-wrap bg-slate-800'>
-        {skills.map((tech) => (
+        {data.map((tech) => (
             <section key={tech.title} className='text-center max-w-md p-10'>
                 {tech.icon}
             <section> 
