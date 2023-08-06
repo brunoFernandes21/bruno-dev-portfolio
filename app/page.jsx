@@ -10,7 +10,6 @@ import code from "/public/images/monitor_coding_2.png";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import { useState } from "react";
-
 export default function Home() {
   const [showNav, setShowNav] = useState(false)
   const toggleNav = () => {
@@ -18,12 +17,13 @@ export default function Home() {
   }
   return (
     <main className="main__container scroll-smooth">
+      
       <section
         id="home"
         className="min-h-screen md:px-20 lg:px-40 bg-slate-100"
       >
         <nav
-          className={`relative py-4 md:flex md:justify-between items-center border-b-2 `}
+          className={`relative py-6 md:flex md:justify-between items-center border-b-2 `}
         >
           <div className="ml-4 text-slate-800 font-black text-3xl">
             <p>BrunoF_Dev</p>
@@ -31,19 +31,19 @@ export default function Home() {
 
           <ul className={`${showNav ? "active" : ""} hidden md:flex justify-center items-center md:gap-2`}>
 
-            <li className="mt-2 py-2 flex justify-center cursor-pointer font-black text-xl text-slate-800 transition duration-150 ease-in hover:text-white hover:bg-slate-800  md:hover:border-b-4 md:hover:border-b-slate-800 md:hover:text-slate-400 md:mt-0 md:px-2 md:mr-2">
+            <li className="mt-2 py-4 flex justify-center cursor-pointer font-black text-xl text-slate-800 transition duration-150 ease-in hover:text-white hover:bg-slate-800 md:py-2  md:hover:text-slate-400 md:border-b-4 md:hover:border-b-slate-800 md:hover:bg-slate-100 md:mt-0 md:px-0 md:mr-10">
               <a href="#skills">
                 <span>Skills</span>
               </a>
             </li>
 
-            <li className="py-2 flex justify-center cursor-pointer font-black text-xl text-slate-800 transition duration-150 ease-in hover:text-white hover:bg-slate-800  md:hover:border-b-4 md:hover:border-b-slate-800 md:hover:text-slate-400 md:mt-0 md:px-2 md:mr-2">
+            <li className="py-4 flex justify-center cursor-pointer font-black text-xl text-slate-800 transition duration-150 ease-in hover:text-white hover:bg-slate-800 md:py-2 md:hover:text-slate-400 md:border-b-4 md:hover:border-b-slate-800 md:hover:bg-slate-100 md:mt-0 md:px-0 md:mr-10">
               <a href="#projects">
                 <span>Projects</span>
               </a>
             </li>
 
-            <li className="py-2 flex justify-center cursor-pointer font-black text-xl text-slate-800 transition duration-150 ease-in hover:text-white hover:bg-slate-800  md:hover:border-b-4 md:hover:border-b-slate-800 md:hover:text-slate-400 md:mt-0 md:px-2 md:mr-2">
+            <li className="py-4 flex justify-center cursor-pointer font-black text-xl text-slate-800 transition duration-150 ease-in hover:text-white hover:bg-slate-800 md:py-2 md:border-b-4 md:hover:border-b-slate-800 md:hover:text-slate-400 md:hover:bg-slate-100 md:mt-0 md:px-0">
               <Link
                 href="https://docs.google.com/document/d/1JZNQOT2RCbmeD0BAp8UvmMoBizHL5-_VjqewAAtfaec/edit?usp=sharing"
                 target="_blank"
@@ -71,7 +71,7 @@ export default function Home() {
           <Link
             href="#"
             onClick={toggleNav}
-            className="absolute right-6 top-4 hover:bg-slate-800 p-2 rounded-lg hover:text-white cursor-pointer text-2xl transition ease-in duration-300 flex md:hidden"
+            className="absolute right-6 top-6 hover:bg-slate-800 p-2 rounded-lg hover:text-white cursor-pointer text-2xl transition ease-in duration-300 flex md:hidden"
           >
             <FaBars />
           </Link>
@@ -86,8 +86,8 @@ export default function Home() {
           </h3>
           <p className="text-xl mb-5 text-slate-800 leading-8 max-w-xl mx-auto">
             With a passion for creating <strong>beautiful</strong> and{" "}
-            <strong>functional web applications</strong> using modern
-            technology.
+            <strong>functional web applications</strong> using <strong>modern
+            technology.</strong>
             <br />
           </p>
           <p className="mt-10">
@@ -101,6 +101,8 @@ export default function Home() {
             </strong>
           </p>
         </div>
+        <div className="mt-12 mx-auto bg-gradient-to-b from-blue-500 w-1 h-20">
+        </div>
         <div className="relative mx-auto mt-12 bg-gradient-to-b from-blue-500 rounded-full w-60 h-60 overflow-hidden md:h-80 md:w-80">
           <Image
             src={code}
@@ -108,7 +110,9 @@ export default function Home() {
             fill
           />
         </div>
+
       </section>
+      
 
       <section
         id="skills"
