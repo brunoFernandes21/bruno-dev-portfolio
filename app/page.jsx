@@ -112,7 +112,7 @@ export default function Home() {
           >
             <li className="mt-2 py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl  text-purple-100 transition duration-150 ease-in hover:text-slate-400 md:mt-0 md:px-0 md:mr-10">
               <a href="#skills">
-                <span>Tech Stack</span>
+                <span>Technologies</span>
               </a>
             </li>
 
@@ -202,7 +202,7 @@ export default function Home() {
             whileHover="hover"
           >
             <strong>
-              <a href="#skills" className="">
+              <a href="#projects" className="">
                 View Projects
               </a>
             </strong>
@@ -225,12 +225,12 @@ export default function Home() {
 
       <section
         id="skills"
-        className="min-h-screen px-5 md:px-20 lg:px-40 bg-slate-800 w-full "
+        className="min-h-screen  px-5 md:px-20 lg:px-40 bg-slate-800 w-full relative"
       >
-        <div >
-          <div className="tech__section__intro w-4/5 m-auto text-center p-6 h-50">
+        <div className="pt-24 lg:pt-44">
+          <div className="tech__section__intro w-4/5 m-auto text-center p-6 h-50 ">
             <h2 className="text-2xl md:text-3xl lg:text-4xl pb-2 font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-100 to-blue-500">
-              Tech Stack
+              Technologies
             </h2>
             <p className="text-purple-100 text-xl py-2 leading-8 lg:w-1/2 m-auto">
               I have worked with some of the most popular technologies in the
@@ -238,7 +238,7 @@ export default function Home() {
             </p>
           </div>
           <Skills/>
-          <div className="back__to_top absolute hidden md:block bottom-6 right-4">
+          <div className="back__to_top absolute hidden md:block bottom-10 right-8">
             <a href="#home">
               <BsFillArrowUpCircleFill className="text-white text-4xl cursor-pointer hover:scale-125 transition ease-linear" />
             </a>

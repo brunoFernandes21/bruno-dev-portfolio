@@ -36,7 +36,7 @@ const frontend = [
   },
   {
     id: 7,
-    image: <Image  className="m-auto mt-4 md:mt-6" src={tailwind} key={tailwind} alt="Tailwind logo"/>
+    image: <Image  className="m-auto mt-4" src={tailwind} key={tailwind} alt="Tailwind logo"/>
   },
   {
     id: 8,
@@ -52,7 +52,7 @@ const frontend = [
   },
   {
     id: 11,
-    image: <Image className="m-auto mt-4 md:mt-6 " src={mongodb} key={mongodb} alt="MongoDb logo"/>
+    image: <Image className="m-auto mt-4 " src={mongodb} key={mongodb} alt="MongoDb logo"/>
   },
   {
     id: 12,
@@ -69,9 +69,9 @@ const frontend = [
 const Skills = () => {
   return (
     <main className="w-full py-14 tech__container relative">
-    <section className="w-[70%] m-auto grid grid-cols-3 lg:grid lg:grid-cols-4 md:justify-center lg:items-center gap-4">
+    <section className="w-[70%] m-auto grid grid-cols-3 md:grid md:grid-cols-4  lg:grid lg:grid-cols-6 lg:justify-center lg:items-center gap-10">
       {frontend.map((stack) => (
-        <section key={stack.id} className=" flex justify-self-center items-center w-20 h-20 p-2 bg-white rounded-md lg:w-40 lg:h-40 overflow-hidden lg:p-6">
+        <section key={stack.id} className=" flex justify-self-center items-center w-20 h-20 p-4 bg-white rounded-md overflow-hidden ">
           {stack.image}
         </section>
       ))}
