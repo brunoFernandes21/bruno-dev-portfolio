@@ -68,12 +68,14 @@ const frontend = [
 
 const Skills = () => {
   return (
-    <main className="w-[70%] m-auto grid grid-cols-3 mt-10 md:grid md:grid-cols-4 md:justify-center md:items-center gap-4 md:gap-6 ">
+    <main className="w-full py-14 tech__container relative">
+    <section className="w-[70%] m-auto grid grid-cols-3 lg:grid lg:grid-cols-4 md:justify-center lg:items-center gap-4">
       {frontend.map((stack) => (
-        <section key={stack.id} className=" flex justify-self-center items-center w-20 h-20 p-2 bg-white rounded-md md:w-40 md:h-40 overflow-hidden md:p-6">
+        <section key={stack.id} className=" flex justify-self-center items-center w-20 h-20 p-2 bg-white rounded-md lg:w-40 lg:h-40 overflow-hidden lg:p-6">
           {stack.image}
         </section>
       ))}
+    </section>
     </main>
   );
 };

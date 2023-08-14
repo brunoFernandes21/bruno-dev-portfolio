@@ -12,6 +12,18 @@
     background: rgb(2,0,36);
     background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(75,9,121,1) 100%);
 }
+.tech__container {
+  position: relative;
+  z-index: 10;
+  background: rgb(13,4,150);
+  background: radial-gradient(circle, rgba(13,4,150,1) 0%, rgba(75,9,121,1) 100%);
+}
+.tech__section__intro {
+  position: relative;
+  z-index: 999;
+  background: rgb(43,4,150);
+  background: linear-gradient(0deg, rgba(43,4,150,1) 0%, rgba(75,9,121,1) 100%);
+}
 .project__card{
     background-color: rgb(30 41 59)
 }

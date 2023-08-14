@@ -12,7 +12,6 @@ import Projects from "./components/Projects";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-
 const navbarVariants = {
   hidden: {
     y: -250,
@@ -26,7 +25,7 @@ const navbarVariants = {
 const introVariants = {
   hidden: {
     opacity: 0,
-    rotate: -180
+    rotate: -180,
   },
   visible: {
     rotate: 0,
@@ -54,15 +53,15 @@ const introTwoVariants = {
 
 const buttonVariants = {
   hidden: {
-    x: "-100vw"
+    x: "-100vw",
   },
   visible: {
     x: 0,
     transition: {
       delay: 3,
       type: "spring",
-      stiffness: 120
-    }
+      stiffness: 120,
+    },
   },
   hover: {
     scale: 1.1,
@@ -77,17 +76,17 @@ const buttonVariants = {
 
 const homeImageVariants = {
   hidden: {
-    opacity: 0
-  }, 
+    opacity: 0,
+  },
   visible: {
     opacity: 1,
     x: [-20, 20, 0],
     transition: {
       delay: 4,
       duration: 1.5,
-    }
-  }
-}
+    },
+  },
+};
 export default function Home() {
   const [showNav, setShowNav] = useState(false);
   const toggleNav = () => {
@@ -95,10 +94,7 @@ export default function Home() {
   };
   return (
     <main className="main__container scroll-smooth">
-      <section
-        id="home"
-        className="min-h-screen md:px-20 lg:px-40 home"
-      >
+      <section id="home" className="min-h-screen md:px-20 lg:px-40 home">
         <motion.nav
           className={`relative py-6 md:flex md:justify-between items-center border-b-2 `}
           variants={navbarVariants}
@@ -166,58 +162,58 @@ export default function Home() {
           </Link>
         </motion.nav>
 
-
-        <div
-          className="text-center "
-        >
-          <motion.h1 className="text-5xl mt-24 py-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500 font-black md:text-6xl"
-          variants={introVariants}
-          initial="hidden"
-          animate="visible"
+        <div className="text-center ">
+          <motion.h1
+            className="text-5xl mt-24 py-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500 font-black md:text-6xl"
+            variants={introVariants}
+            initial="hidden"
+            animate="visible"
           >
             Hello, I am Bruno Fernandes
           </motion.h1>
 
-          <motion.h3 className="text-2xl pt-3 mt- text-purple-100 font-medium md:text-3xl"
-           variants={introTwoVariants}
-           initial="hidden"
-           animate="visible"
+          <motion.h3
+            className="text-2xl pt-3 mt- text-purple-100 font-medium md:text-3xl"
+            variants={introTwoVariants}
+            initial="hidden"
+            animate="visible"
           >
             I am a Junior Software Developer
           </motion.h3>
 
-          <motion.p className="text-xl text-purple-100 leading-8 max-w-xl mx-auto"
-          variants={introTwoVariants}
-          initial="hidden"
-          animate="visible"
+          <motion.p
+            className="text-xl text-purple-100 leading-8 max-w-xl mx-auto"
+            variants={introTwoVariants}
+            initial="hidden"
+            animate="visible"
           >
-            With a passion for creating <strong className="text-2xl">beautiful</strong> and{" "}
-            <strong className="text-2xl">functional</strong> web applications using{" "}
-            <strong className="text-2xl">modern technology.</strong>
+            With a passion for creating{" "}
+            <strong className="text-2xl">beautiful</strong> and{" "}
+            <strong className="text-2xl">functional</strong> web applications
+            using <strong className="text-2xl">modern technology.</strong>
             <br />
           </motion.p>
 
           <motion.button
-            className="mt-10 hover:scale-110 text-lg md:text-xl lg:text-3xl p-2 md:p-3 text-white bg-gradient-to-r from-purple-500 to-blue-700 rounded-full "
+            className="mt-10 text-lg md:text-xl lg:text-3xl p-3 px-6 md:p-3 md:px-6 text-white bg-gradient-to-r from-purple-500 to-blue-700 rounded-full "
             variants={buttonVariants}
             initial="hidden"
             animate="visible"
             whileHover="hover"
           >
             <strong>
-              <a
-                href="#skills"
-              >
-                Find out more!
+              <a href="#skills" className="">
+                View Projects
               </a>
             </strong>
           </motion.button>
         </div>
 
-        <motion.div className="relative mx-auto mt-20 bg-gradient-to-b from-blue-500 rounded-full w-60 h-60 overflow-hidden md:h-80 md:w-80"
-        variants={homeImageVariants}
-        initial="hidden"
-        animate="visible"
+        <motion.div
+          className="relative mx-auto mt-20 bg-gradient-to-b from-blue-500 rounded-full w-60 h-60 overflow-hidden md:h-80 md:w-80"
+          variants={homeImageVariants}
+          initial="hidden"
+          animate="visible"
         >
           <Image
             src={code}
@@ -229,17 +225,19 @@ export default function Home() {
 
       <section
         id="skills"
-        className="min-h-screen pt-4 px-5 md:px-20 lg:px-40 bg-slate-800 w-full relative"
+        className="min-h-screen px-5 md:px-20 lg:px-40 bg-slate-800 w-full "
       >
-        <div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl pb-2 font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-100 to-blue-500">
-            Tech Stack
-          </h2>
-          <p className="text-purple-100 text-xl py-2 leading-8">
-            I have worked with some of the most popular technologies in the web
-            development world. From Backend to Frontend.
-          </p>
-          <Skills />
+        <div >
+          <div className="tech__section__intro w-4/5 m-auto text-center p-6 h-50">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl pb-2 font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-100 to-blue-500">
+              Tech Stack
+            </h2>
+            <p className="text-purple-100 text-xl py-2 leading-8 lg:w-1/2 m-auto">
+              I have worked with some of the most popular technologies in the
+              web development world. From Backend to Frontend.
+            </p>
+          </div>
+          <Skills/>
           <div className="back__to_top absolute hidden md:block bottom-6 right-4">
             <a href="#home">
               <BsFillArrowUpCircleFill className="text-white text-4xl cursor-pointer hover:scale-125 transition ease-linear" />
@@ -258,9 +256,7 @@ export default function Home() {
           </h2>
           <p className="text-xl text-purple-100 text-md py-2 leading-8">
             Below you will find my most recent{" "}
-            <span className="font-black">
-              projects.
-            </span>
+            <span className="font-black">projects.</span>
           </p>
         </div>
         <Projects />
