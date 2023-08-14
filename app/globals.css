@@ -3,25 +3,28 @@
 @tailwind utilities;
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+.home, #projects, #skills  {
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(75,9,121,1) 100%);
+}
+.project__card{
+    background-color: rgb(30 41 59)
+}
 .main__container {
-    scroll-snap-type: y mandatory;
-    overflow: scroll;
-    height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow: scroll;
+  height: 100vh;
 }
 
 section {
-    scroll-snap-align: start;
+  scroll-snap-align: start;
 }
 
 .active {
-    display: block;
+  display: block;
 }
-/* .stack {
-    background-color: #faebce;
-} */
-

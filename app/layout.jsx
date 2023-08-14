@@ -13,8 +13,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} ${poppins.className} bg-slate-100`}>
+    <html lang="en" suppressHydrationWarning={true}>
+      <body 
+      className={`${inter.className} ${poppins.className} background`}>
         <main>
         {children}
         </main>

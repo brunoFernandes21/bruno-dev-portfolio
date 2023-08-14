@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
@@ -10,40 +10,123 @@ import code from "/public/images/monitor_coding_2.png";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import { useState } from "react";
-export default function Home() {
-  const [showNav, setShowNav] = useState(false)
-  const toggleNav = () => {
-    setShowNav(!showNav)
+import { motion } from "framer-motion";
+
+
+const navbarVariants = {
+  hidden: {
+    y: -250,
+  },
+  visible: {
+    y: 0,
+    transition: { delay: 0.2, type: "spring", stiffness: 120 },
+  },
+};
+
+const introVariants = {
+  hidden: {
+    opacity: 0,
+    rotate: -180
+  },
+  visible: {
+    rotate: 0,
+    opacity: 1,
+    transition: {
+      delay: 1,
+      duration: 1.5,
+    },
+  },
+};
+const introTwoVariants = {
+  hidden: {
+    y: -250,
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      delay: 2,
+      duration: 1,
+    },
+  },
+};
+
+const buttonVariants = {
+  hidden: {
+    x: "-100vw"
+  },
+  visible: {
+    x: 0,
+    transition: {
+      delay: 3,
+      type: "spring",
+      stiffness: 120
+    }
+  },
+  hover: {
+    scale: 1.1,
+    textShadow: "0px 0px 8px rgb(255,255,255)",
+    boxShadow: "0px 0px 8px rgb(255,255,255)",
+    transition: {
+      duration: 0.4,
+      yoyo: Infinity,
+    },
+  },
+};
+
+const homeImageVariants = {
+  hidden: {
+    opacity: 0
+  }, 
+  visible: {
+    opacity: 1,
+    x: [-20, 20, 0],
+    transition: {
+      delay: 4,
+      duration: 1.5,
+    }
   }
+}
+export default function Home() {
+  const [showNav, setShowNav] = useState(false);
+  const toggleNav = () => {
+    setShowNav(!showNav);
+  };
   return (
     <main className="main__container scroll-smooth">
-      
       <section
         id="home"
-        className="min-h-screen md:px-20 lg:px-40 bg-slate-100"
+        className="min-h-screen md:px-20 lg:px-40 home"
       >
-        <nav
+        <motion.nav
           className={`relative py-6 md:flex md:justify-between items-center border-b-2 `}
+          variants={navbarVariants}
+          initial="hidden"
+          animate="visible"
         >
-          <div className="ml-4 text-slate-800 font-black text-3xl">
-            <p>BrunoF_Dev</p>
+          <div className="ml-4 text-purple-100 font-black text-xl md:text-xl lg:text-3xl">
+            <p>Bruno.Dev</p>
           </div>
 
-          <ul className={`${showNav ? "active" : ""} hidden md:flex justify-center items-center md:gap-2`}>
-
-            <li className="mt-2 py-4 flex justify-center cursor-pointer font-black text-xl text-slate-800 transition duration-150 ease-in hover:text-white hover:bg-slate-800 md:py-2  md:hover:text-slate-400 md:border-b-4 md:hover:border-b-slate-800 md:hover:bg-slate-100 md:mt-0 md:px-0 md:mr-10">
+          <ul
+            className={`${
+              showNav ? "active" : ""
+            } hidden md:flex justify-center items-center md:gap-2`}
+          >
+            <li className="mt-2 py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl  text-purple-100 transition duration-150 ease-in hover:text-slate-400 md:mt-0 md:px-0 md:mr-10">
               <a href="#skills">
-                <span>Skills</span>
+                <span>Tech Stack</span>
               </a>
             </li>
 
-            <li className="py-4 flex justify-center cursor-pointer font-black text-xl text-slate-800 transition duration-150 ease-in hover:text-white hover:bg-slate-800 md:py-2 md:hover:text-slate-400 md:border-b-4 md:hover:border-b-slate-800 md:hover:bg-slate-100 md:mt-0 md:px-0 md:mr-10">
+            <li className="py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl text-purple-100 transition duration-150 ease-in hover:text-slate-400 md:mt-0 md:px-0 md:mr-10">
               <a href="#projects">
                 <span>Projects</span>
               </a>
             </li>
 
-            <li className="py-4 flex justify-center cursor-pointer font-black text-xl text-slate-800 transition duration-150 ease-in hover:text-white hover:bg-slate-800 md:py-2 md:border-b-4 md:hover:border-b-slate-800 md:hover:text-slate-400 md:hover:bg-slate-100 md:mt-0 md:px-0">
+            <li className="py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl text-purple-100 transition duration-150 ease-in hover:text-slate-400 md:mt-0 md:px-0">
               <Link
                 href="https://docs.google.com/document/d/1JZNQOT2RCbmeD0BAp8UvmMoBizHL5-_VjqewAAtfaec/edit?usp=sharing"
                 target="_blank"
@@ -53,13 +136,19 @@ export default function Home() {
             </li>
           </ul>
 
-          <ul className={` ${showNav ? "active" : ""} hidden md:mr-4 md:flex justify-center md:gap-4 items-center`}>
-            <li className={`mt-4 md:mt-0 text-4xl flex justify-center text-slate-800`}>
+          <ul
+            className={` ${
+              showNav ? "active" : ""
+            } hidden md:mr-4 md:flex justify-center md:gap-4 items-center`}
+          >
+            <li
+              className={`mt-4 md:mt-0 text-4xl flex justify-center text-slate-100`}
+            >
               <Link href="https://github.com/brunoFernandes21" target="_blank">
                 <AiFillGithub className="hover:text-slate-400 hover:cursor-pointer" />
               </Link>
             </li>
-            <li className="mt-4 md:mt-0 text-4xl flex justify-center text-slate-800">
+            <li className="mt-4 md:mt-0 text-4xl flex justify-center text-slate-100">
               <Link
                 href="https://linkedin.com/in/bruno-fernandes-879b0725a"
                 target="_blank"
@@ -71,65 +160,89 @@ export default function Home() {
           <Link
             href="#"
             onClick={toggleNav}
-            className="absolute right-6 top-6 hover:bg-slate-800 p-2 rounded-lg hover:text-white cursor-pointer text-2xl transition ease-in duration-300 flex md:hidden"
+            className="absolute right-5 top-5  hover:bg-purple-100 hover:text-purple-900 p-2 rounded-lg text-purple-100 cursor-pointer text-2xl transition ease-in duration-300 flex md:hidden"
           >
             <FaBars />
           </Link>
-        </nav>
+        </motion.nav>
 
-        <div className="text-center mt-5">
-          <h1 className="text-5xl mt-10 py-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-700 font-black md:text-6xl">
-            Bruno Fernandes
-          </h1>
-          <h3 className="text-2xl pt-3 text-slate-800 font-medium md:text-3xl">
-            I am a Software Developer
-          </h3>
-          <p className="text-xl mb-5 text-slate-800 leading-8 max-w-xl mx-auto">
-            With a passion for creating <strong>beautiful</strong> and{" "}
-            <strong>functional web applications</strong> using <strong>modern
-            technology.</strong>
+
+        <div
+          className="text-center "
+        >
+          <motion.h1 className="text-5xl mt-24 py-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500 font-black md:text-6xl"
+          variants={introVariants}
+          initial="hidden"
+          animate="visible"
+          >
+            Hello, I am Bruno Fernandes
+          </motion.h1>
+
+          <motion.h3 className="text-2xl pt-3 mt- text-purple-100 font-medium md:text-3xl"
+           variants={introTwoVariants}
+           initial="hidden"
+           animate="visible"
+          >
+            I am a Junior Software Developer
+          </motion.h3>
+
+          <motion.p className="text-xl text-purple-100 leading-8 max-w-xl mx-auto"
+          variants={introTwoVariants}
+          initial="hidden"
+          animate="visible"
+          >
+            With a passion for creating <strong className="text-2xl">beautiful</strong> and{" "}
+            <strong className="text-2xl">functional</strong> web applications using{" "}
+            <strong className="text-2xl">modern technology.</strong>
             <br />
-          </p>
-          <p className="mt-10">
+          </motion.p>
+
+          <motion.button
+            className="mt-10 hover:scale-110 text-lg md:text-xl lg:text-3xl p-2 md:p-3 text-white bg-gradient-to-r from-purple-500 to-blue-700 rounded-full "
+            variants={buttonVariants}
+            initial="hidden"
+            animate="visible"
+            whileHover="hover"
+          >
             <strong>
               <a
                 href="#skills"
-                className="text-lg md:text-xl lg:text-3xl p-2 md:p-3 text-white bg-gradient-to-r from-cyan-500 to-blue-700 rounded-full"
               >
                 Find out more!
               </a>
             </strong>
-          </p>
+          </motion.button>
         </div>
-        <div className="mt-12 mx-auto bg-gradient-to-b from-blue-500 w-1 h-20">
-        </div>
-        <div className="relative mx-auto mt-12 bg-gradient-to-b from-blue-500 rounded-full w-60 h-60 overflow-hidden md:h-80 md:w-80">
+
+        <motion.div className="relative mx-auto mt-20 bg-gradient-to-b from-blue-500 rounded-full w-60 h-60 overflow-hidden md:h-80 md:w-80"
+        variants={homeImageVariants}
+        initial="hidden"
+        animate="visible"
+        >
           <Image
             src={code}
             alt="An image of a monitor que code on the screen"
             fill
           />
-        </div>
-
+        </motion.div>
       </section>
-      
 
       <section
         id="skills"
         className="min-h-screen pt-4 px-5 md:px-20 lg:px-40 bg-slate-800 w-full relative"
       >
         <div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl pb-2 font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-500">
-            Skills
+          <h2 className="text-2xl md:text-3xl lg:text-4xl pb-2 font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-100 to-blue-500">
+            Tech Stack
           </h2>
-          <p className="text-gray-300 text-xl py-2 leading-8">
+          <p className="text-purple-100 text-xl py-2 leading-8">
             I have worked with some of the most popular technologies in the web
             development world. From Backend to Frontend.
           </p>
           <Skills />
           <div className="back__to_top absolute hidden md:block bottom-6 right-4">
             <a href="#home">
-              <BsFillArrowUpCircleFill className="text-slate-100 text-4xl cursor-pointer hover:scale-125 transition ease-linear" />
+              <BsFillArrowUpCircleFill className="text-white text-4xl cursor-pointer hover:scale-125 transition ease-linear" />
             </a>
           </div>
         </div>
@@ -140,13 +253,13 @@ export default function Home() {
         className="relative min-h-screen pt-4 px-5 md:px-20 lg:px-40 bg-slate-100 "
       >
         <div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl pb-5 font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-800">
-            Projects
+          <h2 className="text-2xl md:text-3xl lg:text-4xl pb-5 font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-100 to-blue-500">
+            My Projects
           </h2>
-          <p className="text-xl text-slate-800 text-md py-2 leading-8">
-            Below you will find my most recent full stack project using{" "}
-            <span className="font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-800">
-              ReactJs and PostgreSQL.
+          <p className="text-xl text-purple-100 text-md py-2 leading-8">
+            Below you will find my most recent{" "}
+            <span className="font-black">
+              projects.
             </span>
           </p>
         </div>
@@ -154,7 +267,7 @@ export default function Home() {
 
         <div className="back__to_top absolute hidden md:block bottom-6 right-4">
           <a href="#home">
-            <BsFillArrowUpCircleFill className=" text-4xl cursor-pointer hover:scale-125 transition ease-linear" />
+            <BsFillArrowUpCircleFill className=" text-4xl text-white cursor-pointer hover:scale-125 transition ease-linear" />
           </a>
         </div>
       </section>
