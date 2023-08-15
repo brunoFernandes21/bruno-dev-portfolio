@@ -97,11 +97,11 @@ export default function Home() {
       <section id="home" className="min-h-screen md:px-20 lg:px-40 home">
         <motion.nav
           className={`relative py-6 md:flex md:justify-between items-center border-b-2 `}
-          variants={navbarVariants}
-          initial="hidden"
-          animate="visible"
+          // variants={navbarVariants}
+          // initial="hidden"
+          // animate="visible"
         >
-          <div className="ml-4 text-purple-100 font-black text-xl md:text-xl lg:text-3xl">
+          <div className="ml-4 text-slate-100 font-black text-xl md:text-xl lg:text-3xl">
             <p>Bruno.Dev</p>
           </div>
 
@@ -110,19 +110,19 @@ export default function Home() {
               showNav ? "active" : ""
             } hidden md:flex justify-center items-center md:gap-2`}
           >
-            <li className="mt-2 py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl  text-purple-100 transition duration-150 ease-in hover:text-slate-400 md:mt-0 md:px-0 md:mr-10">
+            <li className="mt-2 py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl  text-slate-100 transition duration-150 ease-in hover:text-slate-400 md:mt-0 md:px-0 md:mr-10">
               <a href="#skills">
                 <span>Technologies</span>
               </a>
             </li>
 
-            <li className="py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl text-purple-100 transition duration-150 ease-in hover:text-slate-400 md:mt-0 md:px-0 md:mr-10">
+            <li className="py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl text-slate-100 transition duration-150 ease-in hover:text-slate-400 md:mt-0 md:px-0 md:mr-10">
               <a href="#projects">
                 <span>Projects</span>
               </a>
             </li>
 
-            <li className="py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl text-purple-100 transition duration-150 ease-in hover:text-slate-400 md:mt-0 md:px-0">
+            <li className="py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl text-slate-100 transition duration-150 ease-in hover:text-slate-400 md:mt-0 md:px-0">
               <Link
                 href="https://docs.google.com/document/d/1JZNQOT2RCbmeD0BAp8UvmMoBizHL5-_VjqewAAtfaec/edit?usp=sharing"
                 target="_blank"
@@ -156,7 +156,7 @@ export default function Home() {
           <Link
             href="#"
             onClick={toggleNav}
-            className="absolute right-5 top-5  hover:bg-purple-100 hover:text-purple-900 p-2 rounded-lg text-purple-100 cursor-pointer text-2xl transition ease-in duration-300 flex md:hidden"
+            className="absolute right-5 top-5  hover:bg-slate-100 hover:text-slate-900 p-2 rounded-lg text-slate-100 cursor-pointer text-2xl transition ease-in duration-300 flex md:hidden"
           >
             <FaBars />
           </Link>
@@ -164,28 +164,28 @@ export default function Home() {
 
         <div className="text-center ">
           <motion.h1
-            className="text-5xl mt-24 py-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500 font-black md:text-6xl"
-            variants={introVariants}
-            initial="hidden"
-            animate="visible"
+            className="text-5xl mt-24 py-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-100 to-blue-800 font-black md:text-6xl"
+            // variants={introVariants}
+            // initial="hidden"
+            // animate="visible"
           >
             Hello, I am Bruno Fernandes
           </motion.h1>
 
           <motion.h3
-            className="text-2xl pt-3 mt- text-purple-100 font-medium md:text-3xl"
-            variants={introTwoVariants}
-            initial="hidden"
-            animate="visible"
+            className="text-2xl pt-3 mt- text-slate-100 font-medium md:text-3xl"
+            // variants={introTwoVariants}
+            // initial="hidden"
+            // animate="visible"
           >
             I am a Junior Software Developer
           </motion.h3>
 
           <motion.p
-            className="text-xl text-purple-100 leading-8 max-w-xl mx-auto"
-            variants={introTwoVariants}
-            initial="hidden"
-            animate="visible"
+            className="text-xl text-slate-100 leading-8 max-w-xl mx-auto"
+            // variants={introTwoVariants}
+            // initial="hidden"
+            // animate="visible"
           >
             With a passion for creating{" "}
             <strong className="text-2xl">beautiful</strong> and{" "}
@@ -195,11 +195,11 @@ export default function Home() {
           </motion.p>
 
           <motion.button
-            className="mt-10 text-lg md:text-xl lg:text-3xl p-3 px-6 md:p-3 md:px-6 text-white bg-gradient-to-r from-purple-500 to-blue-700 rounded-full "
-            variants={buttonVariants}
-            initial="hidden"
-            animate="visible"
-            whileHover="hover"
+            className="mt-10 text-lg md:text-xl lg:text-3xl p-3 px-6 md:p-3 md:px-6 text-slate-100 bg-gradient-to-r from-blue-400 to-blue-900 rounded-full "
+            // variants={buttonVariants}
+            // initial="hidden"
+            // animate="visible"
+            // whileHover="hover"
           >
             <strong>
               <a href="#projects" className="">
@@ -211,9 +211,9 @@ export default function Home() {
 
         <motion.div
           className="relative mx-auto mt-20 bg-gradient-to-b from-blue-500 rounded-full w-60 h-60 overflow-hidden md:h-80 md:w-80"
-          variants={homeImageVariants}
-          initial="hidden"
-          animate="visible"
+          // variants={homeImageVariants}
+          // initial="hidden"
+          // animate="visible"
         >
           <Image
             src={code}
@@ -229,10 +229,10 @@ export default function Home() {
       >
         <div className="pt-24 lg:pt-44">
           <div className="tech__section__intro w-4/5 m-auto text-center p-6 h-50 ">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl pb-2 font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-100 to-blue-500">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl pb-2 font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-100 to-blue-800">
               Technologies
             </h2>
-            <p className="text-purple-100 text-xl py-2 leading-8 lg:w-1/2 m-auto">
+            <p className="text-slate-100 text-xl py-2 leading-8 lg:w-1/2 m-auto">
               I have worked with some of the most popular technologies in the
               web development world. From Backend to Frontend.
             </p>
@@ -251,10 +251,10 @@ export default function Home() {
         className="relative min-h-screen pt-4 px-5 md:px-20 lg:px-40 bg-slate-100 "
       >
         <div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl pb-5 font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-100 to-blue-500">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl pb-5 font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-100 to-blue-800">
             My Projects
           </h2>
-          <p className="text-xl text-purple-100 text-md py-2 leading-8">
+          <p className="text-xl text-slate-100 text-md py-2 leading-8">
             Below you will find my most recent{" "}
             <span className="font-black">projects.</span>
           </p>
