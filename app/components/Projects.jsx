@@ -1,34 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import Carousel from "./Carousel";
+import { useState } from "react";
+import { projects } from "./ProjectsData";
 
-const projects = [
-  {
-    id: 1,
-    image: "/images/northcoders-news.png",
-    title: "Northcoders News",
-    description:
-      "Northcoders News is a social news aggregation, web content rating and discussion website. It is a full stack CRUD application that I built as my personal project for the Northcoders bootcamp I attended.",
-    stack: ["ReactJs", "Css", "Tailwind Css", "Node", "Express", "Postgresql"],
-    sourceCode: "https://github.com/brunoFernandes21/nc-news/",
-    live: "https://www.bfnc-news.com",
-    details: "/project-details/nc-news"
-  },
-  {
-    id: 2,
-    image: "/images/northcoders-news.png",
-    title: "Northcoders News",
-    description:
-      "Northcoders News is a social news aggregation, web content rating and discussion website. It is a full stack CRUD application that I built as my personal project for the Northcoders bootcamp I attended.",
-    stack: ["ReactJs", "Css", "Tailwind Css", "Node", "Express", "Postgresql"],
-    sourceCode: "https://github.com/brunoFernandes21/nc-news/",
-    live: "https://www.bfnc-news.com",
-    details: "/project-details/nc-news"
-  },
-];
 
 const Projects = () => {
-
+  const [showDetails, setShowDetails] = useState(false)
 
   return (
     <main className="flex justify-center lg:flex lg:justify-start lg:flex-wrap gap-5 flex-wrap">
@@ -44,11 +21,12 @@ const Projects = () => {
             height={500}
             alt="A picture of northcoders news homepage"
           />
-          <section className="px-10 pb-10">
-            <p className="text-3xl md:text-4xl font-black pt-5 pb-2 text-transparent bg-clip-text bg-gradient-to-r  from-white to-blue-500">
+            <p className="text-lg md:text-2xl font-black pt-5 pb-2 text-transparent bg-clip-text bg-gradient-to-r  from-white to-blue-500">
               {/* <Link href={project.details}>{project.title}</Link> */}
               {project.title}
             </p>
+            <p className="mb-4 font-bold text-md md:text-lg p-2 px-6 md:p-3 md:px-6 text-slate-100 cursor-pointer " onClick={() => setShowDetails(!showDetails)}>{`${showDetails ? "Hide Details" : "Show Details"}`}</p>
+            {showDetails && <section className="px-10 pb-10">
             <div className="w-20 mx-auto h-2 bg-gradient-to-r from-purple-500 to-blue-700 rounded-full my-2"></div>
             <div >
               <p className="text-slate-100 font-black leading-8 text-left">
@@ -94,7 +72,7 @@ const Projects = () => {
                 </strong>
               </p>
             </section>
-          </section>
+          </section>}
         </section>
       ))}
     </main>

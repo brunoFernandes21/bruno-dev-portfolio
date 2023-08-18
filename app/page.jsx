@@ -111,6 +111,11 @@ export default function Home() {
             } hidden md:flex justify-center items-center md:gap-2`}
           >
             <li className="mt-2 py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl  text-slate-100 transition duration-150 ease-in hover:text-slate-400 md:mt-0 md:px-0 md:mr-10">
+              <a href="#about">
+                <span>About Me</span>
+              </a>
+            </li>
+            <li className="mt-2 py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl  text-slate-100 transition duration-150 ease-in hover:text-slate-400 md:mt-0 md:px-0 md:mr-10">
               <a href="#skills">
                 <span>Technologies</span>
               </a>
@@ -162,9 +167,9 @@ export default function Home() {
           </Link>
         </motion.nav>
 
-        <div className="text-center ">
+        <div className="text-center px-5">
           <motion.h1
-            className="text-5xl mt-24 py-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-100 to-blue-800 font-black md:text-6xl"
+            className="text-3xl mt-6 md:mt-24 py-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-100 to-blue-800 font-black md:text-5xl"
             // variants={introVariants}
             // initial="hidden"
             // animate="visible"
@@ -182,7 +187,7 @@ export default function Home() {
           </motion.h3>
 
           <motion.p
-            className="text-xl text-slate-100 leading-8 max-w-xl mx-auto"
+            className="text-lg text-slate-100 leading-8 max-w-xl mx-auto"
             // variants={introTwoVariants}
             // initial="hidden"
             // animate="visible"
@@ -195,15 +200,15 @@ export default function Home() {
           </motion.p>
 
           <motion.button
-            className="mt-10 text-lg md:text-xl lg:text-3xl p-3 px-6 md:p-3 md:px-6 text-slate-100 bg-gradient-to-r from-blue-400 to-blue-900 rounded-full "
+            className="mt-10 text-md md:text-lg lg:text-xl p-3 px-6 md:p-3 md:px-6 text-slate-100 bg-gradient-to-r from-blue-400 to-blue-900 rounded-full "
             // variants={buttonVariants}
             // initial="hidden"
             // animate="visible"
             // whileHover="hover"
           >
             <strong>
-              <a href="#projects" className="">
-                View Projects
+              <a href="#about" className="">
+                Find out more
               </a>
             </strong>
           </motion.button>
@@ -217,6 +222,7 @@ export default function Home() {
         >
           <Image
             src={code}
+            sizes="250"
             alt="An image of a monitor que code on the screen"
             fill
           />
@@ -224,20 +230,48 @@ export default function Home() {
       </section>
 
       <section
-        id="skills"
-        className="min-h-screen  px-5 md:px-20 lg:px-40 bg-slate-800 w-full relative"
+        id="about"
+        className="min-h-screen px-5 md:px-20 lg:px-40w-full relative"
       >
-        <div className="pt-24 lg:pt-44">
+
+        <section className="pt-6 lg:pt-44">
           <div className="tech__section__intro w-4/5 m-auto text-center p-6 h-50 ">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl pb-2 font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-100 to-blue-800">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl pb-2 font-black text-slate-100">
+              About Me
+            </h2>
+          </div>
+        </section>
+        <section className="w-full py-14 tech__container relative">
+          <section className="w-[90%] md:w-[80%] lg:w-[70%] m-auto justify-center text-slate-100">
+            <p className="text-slate-100 text-center text-md ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, hic omnis! Enim incidunt deleniti repellat expedita eum, modi, nobis, alias delectus consequuntur consectetur est harum perferendis odit ratione corrupti exercitationem!
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur fugit recusandae vero, voluptate pariatur esse repellat dolorum? Ipsam sunt corrupti laudantium quo, repudiandae ab eaque tempora voluptatum minima a enim.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam aliquam quasi iure doloremque accusamus sit exercitationem ipsa non omnis doloribus autem, perferendis eius, explicabo vitae obcaecati animi recusandae inventore debitis!
+            </p>
+          </section>
+
+        </section>
+        <div className="back__to_top absolute hidden md:block bottom-10 right-8">
+            <a href="#home">
+              <BsFillArrowUpCircleFill className="text-white text-4xl cursor-pointer hover:scale-125 transition ease-linear" />
+            </a>
+          </div>
+      </section>
+
+      <section
+        id="skills"
+        className="min-h-screen px-5 pb-4 md:px-20 lg:px-40 w-full relative"
+      >
+        <div className="pt-6 lg:pt-44">
+          <div className="tech__section__intro w-4/5 m-auto text-center p-6 h-50 ">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl pb-2 font-black text-slate-100">
               Technologies
             </h2>
-            <p className="text-slate-100 text-xl py-2 leading-8 lg:w-1/2 m-auto">
+            <p className="text-slate-100 text-left md:text-center text-md md:lg py-2 leading-8 lg:w-1/2 m-auto">
               I have worked with some of the most popular technologies in the
               web development world. From Backend to Frontend.
             </p>
           </div>
-          <Skills/>
+          <Skills />
           <div className="back__to_top absolute hidden md:block bottom-10 right-8">
             <a href="#home">
               <BsFillArrowUpCircleFill className="text-white text-4xl cursor-pointer hover:scale-125 transition ease-linear" />
@@ -251,7 +285,7 @@ export default function Home() {
         className="relative min-h-screen pt-4 px-5 md:px-20 lg:px-40 bg-slate-100 "
       >
         <div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl pb-5 font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-100 to-blue-800">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl pb-2 font-black text-slate-100">
             My Projects
           </h2>
           <p className="text-xl text-slate-100 text-md py-2 leading-8">
