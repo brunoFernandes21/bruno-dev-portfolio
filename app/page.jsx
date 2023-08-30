@@ -111,9 +111,9 @@ export default function Home() {
       <section id="home" className="min-h-screen md:px-20 lg:px-40 home">
         <motion.nav
           className={`py-6 md:flex md:justify-between items-center border-b-2 relative`}
-          // variants={navbarVariants}
-          // initial="hidden"
-          // animate="visible"
+          variants={navbarVariants}
+          initial="hidden"
+          animate="visible"
         >
           <div className="ml-4 text-slate-100 font-black text-xl md:text-xl lg:text-3xl">
             <p>Bruno.Dev</p>
@@ -172,39 +172,38 @@ export default function Home() {
               </Link>
             </li>
           </ul>
-          <Link
-            href="#"
+          <button
             onClick={toggleNav}
             className="absolute right-5 top-5  hover:bg-slate-100 hover:text-slate-900 p-2 rounded-lg text-slate-100 cursor-pointer text-2xl transition ease-in duration-300 flex md:hidden"
           >
             <FaBars />
-          </Link>
+          </button>
         </motion.nav>
 
         <div className="text-center px-5">
           <motion.h1
             className="text-3xl mt-6 md:mt-24 py-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-100 to-blue-500 font-black md:text-5xl"
-            // variants={introVariants}
-            // initial="hidden"
-            // animate="visible"
+            variants={introVariants}
+            initial="hidden"
+            animate="visible"
           >
             Hello, I am Bruno Fernandes
           </motion.h1>
 
           <motion.h3
             className="text-2xl pt-3 mt- text-slate-100 font-medium md:text-3xl"
-            // variants={introTwoVariants}
-            // initial="hidden"
-            // animate="visible"
+            variants={introTwoVariants}
+            initial="hidden"
+            animate="visible"
           >
             I am a Junior Software Developer
           </motion.h3>
 
           <motion.p
             className="text-lg text-slate-100 leading-8 max-w-xl mx-auto"
-            // variants={introTwoVariants}
-            // initial="hidden"
-            // animate="visible"
+            variants={introTwoVariants}
+            initial="hidden"
+            animate="visible"
           >
             With a passion for creating{" "}
             <strong className="text-2xl">beautiful</strong> and{" "}
@@ -230,9 +229,9 @@ export default function Home() {
 
         <motion.div
           className="relative mx-auto mt-20 bg-gradient-to-b from-blue-500 rounded-full w-60 h-60 overflow-hidden md:h-80 md:w-80"
-          // variants={homeImageVariants}
-          // initial="hidden"
-          // animate="visible"
+          variants={homeImageVariants}
+          initial="hidden"
+          animate="visible"
         >
           <Image
             src={code}
