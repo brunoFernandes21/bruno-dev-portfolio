@@ -105,12 +105,12 @@ export default function Home() {
   const toggleNav = () => {
     setShowNav(!showNav);
   };
-  
+
   return (
     <main className="main__container scroll-smooth">
-      <section id="home" className="min-h-screen md:px-20 lg:px-40 home">
+      <section id="home" className="sticky left-0 top-0 z-50 home">
         <motion.nav
-          className={`py-6 md:flex md:justify-between items-center border-b-2`}
+          className={` py-6 md:flex md:justify-between items-center border-b-2  bg-slate-800 md:px-20 lg:px-40 w-full`}
           // variants={navbarVariants}
           // initial="hidden"
           // animate="visible"
@@ -118,18 +118,18 @@ export default function Home() {
           <div className="ml-4 text-slate-100 font-black text-xl md:text-xl lg:text-3xl">
             <p>Bruno.Dev</p>
           </div>
-
+          
           <ul
             className={`${
               showNav ? "active" : ""
             } hidden md:flex justify-center items-center md:gap-4 lg:gap-8`}
           >
-            <li className="mt-2 py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl  text-slate-100 transition duration-150 ease-in hover:text-slate-400 md:mt-0 md:px-0">
+            <li className="mt-2 py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl  text-slate-100 transition duration-150 ease-in hover:text-slate-400 md:mt-0 md:px-0 ">
               <a href="#about">
                 <span>About Me</span>
               </a>
             </li>
-            <li className="mt-2 py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl  text-slate-100 transition duration-150 ease-in hover:text-slate-400 md:mt-0 md:px-0">
+            <li className="mt-2 py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl text-slate-100 transition duration-150 ease-in hover:text-slate-400 md:mt-0 md:px-0">
               <a href="#skills">
                 <span>Technologies</span>
               </a>
@@ -180,7 +180,9 @@ export default function Home() {
             <FaBars />
           </Link>
         </motion.nav>
-
+      </section>
+      
+      <section className="min-h-screen px-5 md:px-20 lg:px-40 w-full relative">
         <div className="text-center px-5">
           <motion.h1
             className="text-3xl mt-6 md:mt-24 py-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-100 to-blue-500 font-black md:text-5xl"
@@ -264,17 +266,18 @@ export default function Home() {
               </strong>{" "}
               I am looking for an opportunity to kick start my career in the
               Tech world. Are you on the market looking for a Junior Developer?
-              Feel free to drop me an email at <strong>brunoaf1523@gmail.com</strong>
+              Feel free to drop me an email at{" "}
+              <strong>brunoaf1523@gmail.com</strong>
             </p>
           </section>
           <section className="w-[90%] md:w-[80%] lg:w-[70%] m-auto justify-center text-slate-100 border-b-4 pb-4 pt-4">
             <p className="text-white md:text-white text-left text-md ">
-              I am passionate about learning in general and
-              building Software Applications. I studied Computer Science at The
-              University of Leeds and have just trained as a Junior Full Stack
-              Software Developer at Northcoders. My goal is to become a
-              successful Software Developer. In 5 years I see myself working as
-              a Full Stack Software Developer.
+              I am passionate about learning in general and building Software
+              Applications. I studied Computer Science at The University of
+              Leeds and have just trained as a Junior Full Stack Software
+              Developer at Northcoders. My goal is to become a successful
+              Software Developer. In 5 years I see myself working as a Full
+              Stack Software Developer.
             </p>
           </section>
 
@@ -320,23 +323,27 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects" className="relative min-h-screen pt-4 px-5 md:px-20 lg:px-40">
+      <section
+        id="projects"
+        className="relative min-h-screen pt-4 px-5 md:px-20 lg:px-40"
+      >
         <div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl pb-2 font-black text-slate-100">
             My Projects
           </h2>
           <p className="text-xl text-slate-100 text-md py-2 leading-8">
-          These projects demonstrate my expertise with practical examples of some of my work, including brief descriptions and links to code repositories and live demos.
+            These projects demonstrate my expertise with practical examples of
+            some of my work, including brief descriptions and links to code
+            repositories and live demos.
           </p>
         </div>
-        <Carousel  showDetails={showDetails} setShowDetails={setShowDetails} />
+        <Carousel showDetails={showDetails} setShowDetails={setShowDetails} />
         <div className="back__to_top absolute hidden md:block bottom-6 right-4">
           <a href="#home">
             <BsFillArrowUpCircleFill className=" text-4xl text-white cursor-pointer hover:scale-125 transition ease-linear" />
           </a>
         </div>
-      </section >
-     
+      </section>
     </main>
   );
 }
