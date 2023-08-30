@@ -110,7 +110,7 @@ export default function Home() {
     <main className="main__container scroll-smooth">
       <section id="home" className="min-h-screen md:px-20 lg:px-40 home">
         <motion.nav
-          className={`py-6 md:flex md:justify-between items-center border-b-2`}
+          className={`py-6 md:flex md:justify-between items-center border-b-2 relative`}
           // variants={navbarVariants}
           // initial="hidden"
           // animate="visible"
@@ -215,10 +215,10 @@ export default function Home() {
 
           <motion.button
             className="mt-10 text-md md:text-lg lg:text-xl p-3 px-6 md:p-3 md:px-6 text-slate-100 bg-gradient-to-r from-blue-400 to-blue-900 rounded-full "
-            // variants={buttonVariants}
-            // initial="hidden"
-            // animate="visible"
-            // whileHover="hover"
+            variants={buttonVariants}
+            initial="hidden"
+            animate="visible"
+            whileHover="hover"
           >
             <strong>
               <a href="#about" className="">
