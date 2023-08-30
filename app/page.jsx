@@ -110,10 +110,10 @@ export default function Home() {
     <main className="main__container scroll-smooth">
       <section id="home" className="min-h-screen md:px-20 lg:px-40 home">
         <motion.nav
-          className={`relative py-6 md:flex md:justify-between items-center border-b-2 `}
-          variants={navbarVariants}
-          initial="hidden"
-          animate="visible"
+          className={`py-6 md:flex md:justify-between items-center border-b-2`}
+          // variants={navbarVariants}
+          // initial="hidden"
+          // animate="visible"
         >
           <div className="ml-4 text-slate-100 font-black text-xl md:text-xl lg:text-3xl">
             <p>Bruno.Dev</p>
@@ -184,27 +184,27 @@ export default function Home() {
         <div className="text-center px-5">
           <motion.h1
             className="text-3xl mt-6 md:mt-24 py-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-100 to-blue-500 font-black md:text-5xl"
-            variants={introVariants}
-            initial="hidden"
-            animate="visible"
+            // variants={introVariants}
+            // initial="hidden"
+            // animate="visible"
           >
             Hello, I am Bruno Fernandes
           </motion.h1>
 
           <motion.h3
             className="text-2xl pt-3 mt- text-slate-100 font-medium md:text-3xl"
-            variants={introTwoVariants}
-            initial="hidden"
-            animate="visible"
+            // variants={introTwoVariants}
+            // initial="hidden"
+            // animate="visible"
           >
             I am a Junior Software Developer
           </motion.h3>
 
           <motion.p
             className="text-lg text-slate-100 leading-8 max-w-xl mx-auto"
-            variants={introTwoVariants}
-            initial="hidden"
-            animate="visible"
+            // variants={introTwoVariants}
+            // initial="hidden"
+            // animate="visible"
           >
             With a passion for creating{" "}
             <strong className="text-2xl">beautiful</strong> and{" "}
@@ -215,10 +215,10 @@ export default function Home() {
 
           <motion.button
             className="mt-10 text-md md:text-lg lg:text-xl p-3 px-6 md:p-3 md:px-6 text-slate-100 bg-gradient-to-r from-blue-400 to-blue-900 rounded-full "
-            variants={buttonVariants}
-            initial="hidden"
-            animate="visible"
-            whileHover="hover"
+            // variants={buttonVariants}
+            // initial="hidden"
+            // animate="visible"
+            // whileHover="hover"
           >
             <strong>
               <a href="#about" className="">
@@ -230,9 +230,9 @@ export default function Home() {
 
         <motion.div
           className="relative mx-auto mt-20 bg-gradient-to-b from-blue-500 rounded-full w-60 h-60 overflow-hidden md:h-80 md:w-80"
-          variants={homeImageVariants}
-          initial="hidden"
-          animate="visible"
+          // variants={homeImageVariants}
+          // initial="hidden"
+          // animate="visible"
         >
           <Image
             src={code}
@@ -269,8 +269,7 @@ export default function Home() {
           </section>
           <section className="w-[90%] md:w-[80%] lg:w-[70%] m-auto justify-center text-slate-100 border-b-4 pb-4 pt-4">
             <p className="text-white md:text-white text-left text-md ">
-              I was Born and raised in a small country in Africa. I am a husband
-              and a father who is passionate about learning in general and
+              I am passionate about learning in general and
               building Software Applications. I studied Computer Science at The
               University of Leeds and have just trained as a Junior Full Stack
               Software Developer at Northcoders. My goal is to become a
@@ -327,8 +326,7 @@ export default function Home() {
             My Projects
           </h2>
           <p className="text-xl text-slate-100 text-md py-2 leading-8">
-            Below you will find my most recent{" "}
-            <span className="font-black">projects.</span>
+          These projects demonstrate my expertise with practical examples of some of my work, including brief descriptions and links to code repositories and live demos.
           </p>
         </div>
         <Carousel  showDetails={showDetails} setShowDetails={setShowDetails} />
