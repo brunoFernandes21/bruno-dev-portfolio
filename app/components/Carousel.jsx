@@ -79,7 +79,7 @@ export default function Carousel({ showDetails, setShowDetails }) {
                     <p>
                       <strong>
                         <a
-                          href="https://www.bfnc-news.com"
+                          href="https://github.com/brunoFernandes21/nc-news/"
                           target="_blank"
                           rel="noreferrer"
                           className=" cursor-pointer transition ease-in-out text-white bg-gradient-to-r from-cyan-500 to-blue-700 p-2 lg:p-3 rounded-md hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-700"
@@ -91,7 +91,7 @@ export default function Carousel({ showDetails, setShowDetails }) {
                     <p>
                       <strong>
                         <a
-                          href="https://github.com/brunoFernandes21/nc-news/"
+                          href="https://www.bfnc-news.com"
                           target="_blank"
                           rel="noreferrer"
                           className=" cursor-pointer transition ease-in-out text-white bg-gradient-to-r from-cyan-500 to-blue-700 p-2 lg:p-3 rounded-md hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-700"
