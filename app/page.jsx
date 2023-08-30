@@ -107,7 +107,7 @@ export default function Home() {
   };
   
   return (
-    <main className="main__container scroll-smooth pb-10">
+    <main className="main__container scroll-smooth">
       <section id="home" className="min-h-screen md:px-20 lg:px-40 home">
         <motion.nav
           className={`relative py-6 md:flex md:justify-between items-center border-b-2 `}
