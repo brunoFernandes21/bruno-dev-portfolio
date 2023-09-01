@@ -43,3 +43,7 @@ section {
 .active {
   display: block;
 }
+
+.contact__form {
+  background-color: #292929;
+}
