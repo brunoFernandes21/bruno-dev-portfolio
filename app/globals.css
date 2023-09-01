@@ -21,6 +21,7 @@
   background: rgb(14,8,200);
 background: radial-gradient(circle, rgba(14,8,200,1) 0%, rgba(0,0,0,1) 97%);
 }
+
 .about__me, .about__me__intro {
   background: rgb(14,8,200);
 background: radial-gradient(circle, rgba(14,8,200,1) 0%, rgba(0,0,0,1) 97%);
@@ -46,4 +47,23 @@ section {
 
 .contact__form {
   background-color: #292929;
+}
+
+.modal{
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+}
+.modal button{
+  color: #444;
+  border-color: #444;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.modal p{
+  color: #444;
+  font-weight: bold;
 }

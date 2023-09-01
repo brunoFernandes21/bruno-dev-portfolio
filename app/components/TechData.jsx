@@ -15,51 +15,63 @@ import jest from "@/public/images/jest.svg"
 export const techStack = [
     {
       id: 1,
-      image: <Image src={html} key={html} alt="Html logo"/> 
+      name: "Html",
+      image: <Image className="m-auto" src={html} width={60} height={60} key={html} alt="Html logo"/> 
     },
     {
       id: 2,
-      image: <Image src={css} key={css} alt="css logo"/> 
+      name: "Css",
+      image: <Image className="m-auto" src={css} width={60} height={60} key={css} alt="css logo"/> 
     },
     {
       id: 3,
-      image: <Image src={javascript} key={javascript} alt="javascript logo"/>
+      name: "Javascript",
+      image: <Image className="m-auto" src={javascript} width={60} height={60} key={javascript} alt="javascript logo"/>
     },
     {
       id: 4,
-      image: <Image src={react} key={react} alt="react logo"/> 
+      name: "React",
+      image: <Image className="m-auto" src={react} width={60} height={60} key={react} alt="react logo"/> 
     },
     {
       id: 6,
-      image: <Image src={nextjs} key={nextjs} alt="NextJs logo"/>
+      name: "Next",
+      image: <Image className="m-auto" src={nextjs} width={60} height={60} key={nextjs} alt="NextJs logo"/>
     },
     {
       id: 7,
-      image: <Image  className="m-auto mt-4" src={tailwind} key={tailwind} alt="Tailwind logo"/>
+      name: "Tailwind",
+      image: <Image  className="m-auto" src={tailwind} width={60} height={60} key={tailwind} alt="Tailwind logo"/>
     },
     {
       id: 8,
-      image: <Image src={node} key={node} alt="Node logo"/>
+      name: "Node",
+      image: <Image className="m-auto" src={node} key={node} width={60} height={60} alt="Node logo"/>
     },
     {
       id: 9,
-      image: <Image  src={express} key={express} alt="Express logo"/>
+      name: "Express",
+      image: <Image className="m-auto" width={60} height={60} src={express} key={express} alt="Express logo"/>
     },
     {
       id: 10,
-      image: <Image className="m-auto w-40 " src={firebase} key={firebase} alt="Firebase logo"/>
+      name: "Firebase",
+      image: <Image className="m-auto" width={60} height={60} src={firebase} key={firebase} alt="Firebase logo"/>
     },
     {
       id: 11,
-      image: <Image className="m-auto mt-4 " src={mongodb} key={mongodb} alt="MongoDb logo"/>
+      name: "MongoDB",
+      image: <Image className="m-auto" width={60} height={60} src={mongodb} key={mongodb} alt="MongoDb logo"/>
     },
     {
       id: 12,
-      image: <Image src={postgres} key={postgres} alt="Postgres logo"/>
+      name: "PostGres",
+      image: <Image className="m-auto" src={postgres} key={postgres} width={60} height={60} alt="Postgres logo"/>
     },
     {
       id: 13,
-      image: <Image className="m-auto w-40" src={jest} key={jest} alt="Html logo"/>
+      name: "Jest",
+      image: <Image className="m-auto" width={60} height={60} src={jest} key={jest} alt="Html logo"/>
     },
   
   ]
