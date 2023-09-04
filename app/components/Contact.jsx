@@ -76,11 +76,8 @@ const Contact = () => {
         id="contact"
         className="relative min-h-screen pt-4 px-5 md:px-20 lg:px-40 lg:flex lg:justify-center"
       >
-        <motion.section
+        <section
           className="contact__form rounded-xl p-6 lg:w-[70%] h-fit"
-          variants={contactVariants}
-          initial="hidden"
-          animate="visible"
         >
           <div>
             <p className="text-xl mb-2 font-black text-gray-400">
@@ -154,7 +151,7 @@ const Contact = () => {
               <BsFillArrowUpCircleFill className=" text-4xl text-white cursor-pointer hover:scale-125 transition ease-linear" />
             </a>
           </div>
-        </motion.section>
+        </section>
       </section>
     </>
   );
