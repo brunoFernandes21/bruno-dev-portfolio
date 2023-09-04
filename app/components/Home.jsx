@@ -4,9 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
+import { AiOutlineClose } from "react-icons/ai";
+
+
 import code from "/public/images/monitor_coding_2.png";
 import { motion } from "framer-motion";
-
 const navbarVariants = {
   hidden: {
     y: -250,
@@ -130,31 +132,31 @@ const Home = () => {
             showNav ? "active" : ""
           } hidden lg:flex justify-center items-center lg:gap-8`}
         >
-          <li className="mt-2 py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl  text-slate-100 transition duration-150 ease-in hover:text-slate-400 md:mt-0 md:px-0">
-            <a href="#about">
+          <li className="mt-2 py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl  text-slate-100  md:mt-0 md:px-0">
+            <Link href="#about" className="transition duration-150 ease-in hover:text-slate-400">
               <span>About Me</span>
-            </a>
+            </Link>
           </li>
-          <li className="py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl  text-slate-100 transition duration-150 ease-in hover:text-slate-400 md:mt-0 md:px-0">
-            <a href="#skills">
+          <li className="py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl  text-slate-100 md:mt-0 md:px-0">
+            <Link href="#skills" className="transition duration-150 ease-in hover:text-slate-400">
               <span>Technologies</span>
-            </a>
+            </Link>
           </li>
 
-          <li className="py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl text-slate-100 transition duration-150 ease-in hover:text-slate-400 md:mt-0 md:px-0 ">
-            <a href="#projects">
+          <li className="py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl text-slate-100 md:mt-0 md:px-0 ">
+            <Link href="#projects" className="transition duration-150 ease-in hover:text-slate-400">
               <span>Projects</span>
-            </a>
+            </Link>
           </li>
 
-          <li className="py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl text-slate-100 transition duration-150 ease-in hover:text-slate-400 md:mt-0 md:px-0 ">
-            <a href="#contact">
+          <li className="py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl text-slate-100 md:mt-0 md:px-0 ">
+            <Link href="#contact" className="transition duration-150 ease-in hover:text-slate-400">
               <span>Contact</span>
-            </a>
+            </Link>
           </li>
 
-          <li className="py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl text-slate-100 transition duration-150 ease-in hover:text-slate-400 md:mt-0 md:px-0">
-            <button onClick={downloadCV}>Get CV</button>
+          <li className="py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl text-slate-100 md:mt-0 md:px-0">
+            <button onClick={downloadCV} className="transition duration-150 ease-in hover:text-slate-400">Get CV</button>
           </li>
         </ul>
 
@@ -179,12 +181,18 @@ const Home = () => {
             </Link>
           </li>
         </ul>
-        <button
+        {!showNav && <button
           onClick={toggleNav}
           className="absolute right-5 top-5  hover:bg-slate-100 hover:text-slate-900 p-2 rounded-lg text-slate-100 cursor-pointer text-2xl transition ease-in duration-300 flex lg:hidden"
         >
           <FaBars />
-        </button>
+        </button>}
+        {showNav && <button
+          onClick={toggleNav}
+          className="absolute right-5 top-5  hover:bg-slate-100 hover:text-slate-900 p-2 rounded-full text-slate-100 cursor-pointer text-2xl transition ease-in duration-300 flex lg:hidden"
+        >
+          <AiOutlineClose  />
+        </button>}
       </motion.nav>
 
       <div className="text-center px-5">
