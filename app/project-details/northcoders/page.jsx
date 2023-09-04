@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -66,8 +66,17 @@ const cardVariantsFour = {
 };
 const page = () => {
   return (
-    <main className="project__details min-h-screen flex mx-auto justify-center items-center flex-wrap py-5 px-5 md:p-10 lg-20">
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full text-white gap-4 justify-center m-auto ">
+    <main className="project__details min-h-screen py-5 px-5 md:p-10 lg-20">
+      <button className="border rounded text-white mr-auto px-4 py-2 hover:bg-white hover:text-slate-900 transition ease-in-out">
+        <Link href="/">Back To Home</Link>
+      </button>
+
+      <div className="mt-10 mb-10">
+        <h1 className="text-white text-center text-xl font-black ">
+          Northcoders News
+        </h1>
+      </div>
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full text-white gap-4 justify-center m-auto mt-4">
         <motion.section
           variants={cardVariantsOne}
           initial="hidden"
@@ -137,10 +146,11 @@ const page = () => {
         </motion.section>
 
         <motion.section
-        variants={cardVariantsTwo}
-        initial="hidden"
-        animate="visible"
-         className=" bg-slate-900 transition ease-in-out hover:scale-105  w-md mx-auto shadow-md shadow-gray-500 rounded-md">
+          variants={cardVariantsTwo}
+          initial="hidden"
+          animate="visible"
+          className=" bg-slate-900 transition ease-in-out hover:scale-105  w-md mx-auto shadow-md shadow-gray-500 rounded-md"
+        >
           <Image
             src="/images/northcoders05.png"
             className="mx-auto rounded-t"
@@ -165,9 +175,12 @@ const page = () => {
           </section>
         </motion.section>
 
-        <motion.section variants={cardVariantsThree}
+        <motion.section
+          variants={cardVariantsThree}
           initial="hidden"
-          animate="visible" className=" bg-slate-900 transition ease-in-out hover:scale-105  w-md mx-auto shadow-md shadow-gray-500 rounded-md">
+          animate="visible"
+          className=" bg-slate-900 transition ease-in-out hover:scale-105  w-md mx-auto shadow-md shadow-gray-500 rounded-md"
+        >
           <Image
             src="/images/northcoders06.png"
             className="mx-auto rounded-t"
@@ -190,10 +203,11 @@ const page = () => {
         </motion.section>
 
         <motion.section
-        variants={cardVariantsFour}
-        initial="hidden"
-        animate="visible"
-        className=" bg-slate-900 transition ease-in-out hover:scale-105 w-md mx-auto shadow-md shadow-gray-500 rounded-md">
+          variants={cardVariantsFour}
+          initial="hidden"
+          animate="visible"
+          className=" bg-slate-900 transition ease-in-out hover:scale-105 w-md mx-auto shadow-md shadow-gray-500 rounded-md"
+        >
           <Image
             src="/images/northcoders04.png"
             className="mx-auto rounded-t"
@@ -205,11 +219,11 @@ const page = () => {
             <div className="w-20 mx-auto h-2 bg-gradient-to-r from-purple-500 to-blue-700 rounded-full my-2"></div>
             <div className="max-w-md mx-auto">
               <p className="text-slate-100 font-black leading-8 text-left">
-                From the article&apos;s page you can leave a comment. You are also
-                able to see all the comments related to the article by clicking
-                show comments and delete your comments in case you change your
-                mind. Bear in mind that as a user, you are only able to delete
-                your own comments.
+                From the article&apos;s page you can leave a comment. You are
+                also able to see all the comments related to the article by
+                clicking show comments and delete your comments in case you
+                change your mind. Bear in mind that as a user, you are only able
+                to delete your own comments.
               </p>
             </div>
           </section>
