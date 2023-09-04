@@ -180,7 +180,7 @@ const page = () => {
             <div className="max-w-md mx-auto">
               <p className="text-slate-100 font-black leading-8 text-left">
                 When you click on an article in the home page, you are taken to
-                the article's page where you can read the article, like and
+                the article&apos;s page where you can read the article, like and
                 dislike it. You can also see how many comments this article has
                 recieved so far. When you like or dislike, the likes count goes
                 up or down accordingly.
@@ -205,7 +205,7 @@ const page = () => {
             <div className="w-20 mx-auto h-2 bg-gradient-to-r from-purple-500 to-blue-700 rounded-full my-2"></div>
             <div className="max-w-md mx-auto">
               <p className="text-slate-100 font-black leading-8 text-left">
-                From the article's page you can leave a comment. You are also
+                From the article&apos;s page you can leave a comment. You are also
                 able to see all the comments related to the article by clicking
                 show comments and delete your comments in case you change your
                 mind. Bear in mind that as a user, you are only able to delete
