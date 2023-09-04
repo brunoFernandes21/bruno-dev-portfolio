@@ -1,11 +1,9 @@
 "use client"
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
 import Carousel from "./Carousel";
-import { useState } from "react";
 
 
 const Projects = () => {
-    const [showDetails, setShowDetails] = useState(false);
 
   return (
     <section
@@ -22,7 +20,7 @@ const Projects = () => {
         repositories and live demos.
       </p>
     </div>
-    <Carousel showDetails={showDetails} setShowDetails={setShowDetails} />
+    <Carousel/>
     <div className="back__to_top absolute hidden md:block bottom-6 right-4">
       <a href="#home">
         <BsFillArrowUpCircleFill className=" text-4xl text-white cursor-pointer hover:scale-125 transition ease-linear" />
