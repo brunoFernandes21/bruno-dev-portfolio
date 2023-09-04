@@ -155,7 +155,7 @@ const Home = () => {
             </a>
           </li>
 
-          <li className="py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl text-slate-100 md:mt-0 md:px-0">
+          <li className="py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl text-slate-100  md:mt-0 md:px-0">
             <button onClick={downloadCV} className="transition duration-150 ease-in hover:text-slate-400">Get CV</button>
           </li>
         </ul>
