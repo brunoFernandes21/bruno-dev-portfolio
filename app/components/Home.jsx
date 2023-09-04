@@ -133,26 +133,26 @@ const Home = () => {
           } hidden lg:flex justify-center items-center lg:gap-8`}
         >
           <li className="mt-2 py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl  text-slate-100  md:mt-0 md:px-0">
-            <Link href="#about" className="transition duration-150 ease-in hover:text-slate-400">
+            <a href="#about" className="transition duration-150 ease-in hover:text-slate-400">
               <span>About Me</span>
-            </Link>
+            </a>
           </li>
           <li className="py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl  text-slate-100 md:mt-0 md:px-0">
-            <Link href="#skills" className="transition duration-150 ease-in hover:text-slate-400">
+            <a href="#skills" className="transition duration-150 ease-in hover:text-slate-400">
               <span>Technologies</span>
-            </Link>
+            </a>
           </li>
 
           <li className="py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl text-slate-100 md:mt-0 md:px-0 ">
-            <Link href="#projects" className="transition duration-150 ease-in hover:text-slate-400">
+            <a href="#projects" className="transition duration-150 ease-in hover:text-slate-400">
               <span>Projects</span>
-            </Link>
+            </a>
           </li>
 
           <li className="py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl text-slate-100 md:mt-0 md:px-0 ">
-            <Link href="#contact" className="transition duration-150 ease-in hover:text-slate-400">
+            <a href="#contact" className="transition duration-150 ease-in hover:text-slate-400">
               <span>Contact</span>
-            </Link>
+            </a>
           </li>
 
           <li className="py-2 flex justify-center cursor-pointer font-black text-lg md:text-xl text-slate-100 md:mt-0 md:px-0">
