@@ -23,7 +23,7 @@ const About = () => {
         </strong>{" "}
         I am looking for an opportunity to kick start my career in the
         Tech world. Are you on the market looking for a Junior Developer?
-        Feel free <a href="#contact" className="underline"><strong>contact me!</strong></a>
+        Feel free to <a href="#contact" className="underline"><strong>contact me!</strong></a>
       </p>
     </section>
     <section className="w-[90%] md:w-[80%] lg:w-[70%] m-auto justify-center text-slate-100 border-b-4 pb-4 pt-4">
@@ -40,7 +40,7 @@ const About = () => {
     <section className="w-[90%] md:w-[80%] lg:w-[70%] m-auto justify-center text-slate-100 pt-4">
       <p className="text-white text-left text-md ">
         15 years ago I was living on an Island and could hardly introduce
-        myself in English. Today I live in England and did a bootcamp in
+        myself in English. Today I live in England and studied Computer Science and did a bootcamp in
         Software Engineering. This is mind blowing. Teaching myself
         English has been my greatest achievement, as it has unlocked doors
         to opportunities and enabled me to achieve things that I could not
