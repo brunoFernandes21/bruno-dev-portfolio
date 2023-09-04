@@ -22,42 +22,52 @@ const Contact = () => {
   const form = useRef();
   const [success, setSuccess] = useState(null);
   const [unsuccess, setUnsuccess] = useState(null);
+  const [isEmpty, setIsEmpty] = useState(null)
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs
-      .sendForm(
-        process.env.NEXT_PUBLIC_SERVICE_KEY,
-        process.env.NEXT_PUBLIC_TEMPLATE_KEY,
-        form.current,
-        process.env.NEXT_PUBLIC_PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          const inputs = Array.from(document.querySelectorAll("input"))
-          inputs.forEach(element => {
-            element.value = ""
-          });
-          document.querySelectorAll("textarea")[0].value = "";
-          setSuccess(
-            "Thank you. Your message has been sent. Bruno will be in contact with you soon."
+    const inputs = Array.from(document.querySelectorAll("input"));
+    inputs.forEach((element) => {
+      if (element.value !== "") {
+        setIsEmpty(false)
+        emailjs
+          .sendForm(
+            process.env.NEXT_PUBLIC_SERVICE_KEY,
+            process.env.NEXT_PUBLIC_TEMPLATE_KEY,
+            form.current,
+            process.env.NEXT_PUBLIC_PUBLIC_KEY
+          )
+          .then(
+            (result) => {
+              inputs.forEach((element) => {
+                element.value = "";
+              });
+              document.querySelectorAll("textarea")[0].value = "";
+              setSuccess(
+                "Thank you. Your message has been sent. Bruno will be in contact with you soon."
+              );
+              setTimeout(() => {
+                setSuccess(null);
+              }, 3000);
+              setUnsuccess(null);
+            },
+            (error) => {
+              console.log(error.text);
+              setSuccess(null);
+              setUnsuccess(
+                "Unable to send message. Try again later or contact Bruno by email: brunoaf1523@gmail.com"
+              );
+              setTimeout(() => {
+                setUnsuccess(null);
+              }, 3000);
+            }
           );
-          setTimeout(() => {
-            setSuccess(null);
-          }, 5000);
-          setUnsuccess(null);
-        },
-        (error) => {
-          console.log(error.text);
-          setSuccess(null);
-          setUnsuccess(
-            "Unable to send message. Try again later or contact Bruno by email: brunoaf1523@gmail.com"
-          );
-          setTimeout(() => {
-            setUnsuccess(null);
-          }, 5000);
-        }
-      );
+      } else {
+        setIsEmpty("Please fill in all the empty fields.")
+        setTimeout(() => {
+          setIsEmpty(null);
+        }, 3000);
+      }
+    });
   };
 
   return (
@@ -86,7 +96,7 @@ const Contact = () => {
             <div className="flex flex-col gap-4">
               <label htmlFor="name">Your Name</label>
               <input
-                className="rounded-md p-4 bg-black"
+                className={`rounded-md p-4 bg-black ${isEmpty ? "text-black bg-red-100 border-2 border-red-600" : ""}`}
                 type="text"
                 id="name"
                 name="user_name"
@@ -96,7 +106,7 @@ const Contact = () => {
             <div className="flex flex-col gap-4">
               <label htmlFor="email">Your Email</label>
               <input
-                className="rounded-md p-4 bg-black"
+                className={`rounded-md p-4 bg-black ${isEmpty ? "text-black bg-red-100 border-2 border-red-600" : ""}`}
                 type="text"
                 id="email"
                 name="user_email"
@@ -106,7 +116,7 @@ const Contact = () => {
             <div className="flex flex-col gap-4">
               <label htmlFor="message">Your Message</label>
               <textarea
-                className="rounded-md p-4 bg-black"
+                className={`rounded-md p-4 bg-black ${isEmpty ? "text-black bg-red-100 border-2 border-red-600" : ""}`}
                 type="text"
                 name="message"
                 id="message"
@@ -131,6 +141,11 @@ const Contact = () => {
             {unsuccess && (
               <div className="w-[80%] bg-slate-100 border mb-5 border-slate-400 text-slate-700 px-4 py-3 rounded flex justify-center text-center mx-auto">
                 <span className="font-bold ">{unsuccess}</span>
+              </div>
+            )}
+            {isEmpty && (
+              <div className="w-[80%] bg-red-100 border mb-5 border-red-400 text-slate-700 px-4 py-3 rounded flex justify-center text-center mx-auto">
+                <span className="font-bold ">{isEmpty}</span>
               </div>
             )}
           </form>
