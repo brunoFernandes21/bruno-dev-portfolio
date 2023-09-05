@@ -34,6 +34,7 @@ export default function Carousel() {
               width={500}
               height={500}
               alt="A picture of northcoders news homepage"
+              priority={true}
             />
             <section className="mt-4">
               <p className="text-lg md:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-500">

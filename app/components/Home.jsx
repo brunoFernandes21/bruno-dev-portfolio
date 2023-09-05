@@ -253,6 +253,7 @@ const Home = () => {
           sizes="250"
           alt="An image of a monitor que code on the screen"
           fill
+          priority={true}
         />
       </motion.div>
     </section>

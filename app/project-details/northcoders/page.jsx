@@ -89,6 +89,7 @@ const page = () => {
             width={500}
             height={500}
             alt="A picture of northcoders news homepage"
+            priority={true}
           />
           <section className="px-4 w-md pb-6 pt-4">
             <div className="w-20 mx-auto h-2 bg-gradient-to-r from-purple-500 to-blue-700 rounded-full my-2"></div>
@@ -157,6 +158,7 @@ const page = () => {
             width={500}
             height={500}
             alt="A picture of northcoders news homepage"
+            priority={true}
           />
           <section className="px-4 w-md pb-6 pt-4">
             <div className="w-20 mx-auto h-2 bg-gradient-to-r from-purple-500 to-blue-700 rounded-full my-2"></div>
@@ -187,6 +189,7 @@ const page = () => {
             width={500}
             height={500}
             alt="A picture of northcoders news homepage"
+            priority={true}
           />
           <section className="px-4 w-md pb-6 pt-4">
             <div className="w-20 mx-auto h-2 bg-gradient-to-r from-purple-500 to-blue-700 rounded-full my-2"></div>
@@ -214,6 +217,7 @@ const page = () => {
             width={500}
             height={500}
             alt="A picture of northcoders news homepage"
+            priority={true}
           />
           <section className="px-4 w-md pb-6 pt-4">
             <div className="w-20 mx-auto h-2 bg-gradient-to-r from-purple-500 to-blue-700 rounded-full my-2"></div>
