@@ -42,7 +42,7 @@ export default function Carousel() {
               </p>
               <button className="mt-4 text-md p-3 px-6 md:p-3 md:px-6 text-slate-100 bg-gradient-to-r from-blue-400 to-blue-900 rounded-full font-black hover:border-2 transition ease-in-out">
               <Link
-                href="/project-details/northcoders"
+                href="/project-details/northcoders-news"
               >
                 Project Detail
               </Link>
