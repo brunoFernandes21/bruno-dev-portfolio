@@ -95,10 +95,7 @@ const page = () => {
             <div className="w-20 mx-auto h-2 bg-gradient-to-r from-purple-500 to-blue-700 rounded-full my-2"></div>
             <div className="max-w-md mx-auto">
               <p className="text-slate-100 font-black leading-8 text-left">
-                Northcoders News is a social news aggregation, web content
-                rating and discussion website. It is a full stack fully
-                responsive web application that I built as my personal project
-                for the Northcoders bootcamp I attended.
+              Northcoders News is a social news aggregation, web content rating and discussion website. It is a full stack fully responsive web application that I built as my personal project for the Software Development Bootcamp I did at Northcoders.
               </p>
             </div>
 
