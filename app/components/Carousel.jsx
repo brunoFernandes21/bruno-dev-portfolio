@@ -14,14 +14,6 @@ export default function Carousel() {
     slidesToScroll: 1,
   };
 
-  const totalfitnessStack = [
-    "Mongo DB",
-    "Express",
-    "ReactJS",
-    "Node",
-    "Css",
-    "Tailwind Css",
-  ];
 
   return (
     <div className=" text-center mx-auto mt-5 w-[90%] md:w-[80%] text-white">

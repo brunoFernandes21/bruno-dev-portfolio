@@ -1,97 +1,22 @@
 "use client";
-import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import MobileCarousel from "@/app/components/MobileCarousel";
+Image;
+const MobileCarousel = ({ northcodersStack }) => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
 
-const northcodersStack = [
-  "ReactJs",
-  "Css",
-  "Tailwind Css",
-  "Node",
-  "Express",
-  "Postgresql",
-];
-const cardVariantsOne = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    x: [-20, 20, 0],
-    transition: {
-      delay: 0.5,
-      duration: 1.5,
-    },
-  },
-};
-const cardVariantsTwo = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    x: [-20, 20, 0],
-    transition: {
-      delay: 1,
-      duration: 1.5,
-    },
-  },
-};
-const cardVariantsThree = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    x: [-20, 20, 0],
-    transition: {
-      delay: 1.5,
-      duration: 1.5,
-    },
-  },
-};
-const cardVariantsFour = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    x: [-20, 20, 0],
-    transition: {
-      delay: 2,
-      duration: 1.5,
-    },
-  },
-};
-
-const slides = [
-  "/images/northcoders07.png",
-  "/images/northcoders03.png",
-  "/images/northcoders05.png",
-  "/images/northcoders06.png",
-];
-const page = () => {
   return (
-    <main className="project__details min-h-screen py-5 px-5 md:p-10 lg-20">
-      <button className="border rounded text-white mr-auto px-4 py-2 hover:bg-white hover:text-slate-900 transition ease-in-out">
-        <Link href="/">Back To Home</Link>
-      </button>
-
-      <div className="mt-10 mb-10">
-        <h1 className="text-white text-center text-xl font-black ">
-          Northcoders News
-        </h1>
-      </div>
-      <section className="hidden  md:grid md:grid-cols-2 lg:grid-cols-4 w-full text-white gap-4 justify-center m-auto mt-4">
-
-        <motion.section
-          variants={cardVariantsOne}
-          initial="hidden"
-          animate="visible"
-          className=" bg-slate-900 transition ease-in-out hover:scale-105   mx-auto shadow-md shadow-gray-500 rounded-md "
-        >
+    <div className=" text-center mx-auto mt-5 w-[90%] md:hidden text-white">
+      <Slider {...settings}>
+        <section className=" bg-slate-900 mx-auto shadow-md shadow-gray-500 rounded-md ">
           <Image
             src="/images/northcoders07.png"
             className="mx-auto rounded-t"
@@ -153,13 +78,10 @@ const page = () => {
               </p>
             </section>
           </section>
-        </motion.section>
+        </section>
 
-        <motion.section
-          variants={cardVariantsTwo}
-          initial="hidden"
-          animate="visible"
-          className=" bg-slate-900 transition ease-in-out hover:scale-105  w-md mx-auto shadow-md shadow-gray-500 rounded-md"
+        <section
+          className=" bg-slate-900 w-md mx-auto shadow-md shadow-gray-500 rounded-md"
         >
           <Image
             src="/images/northcoders05.png"
@@ -184,13 +106,10 @@ const page = () => {
               </p>
             </div>
           </section>
-        </motion.section>
+        </section>
 
-        <motion.section
-          variants={cardVariantsThree}
-          initial="hidden"
-          animate="visible"
-          className=" bg-slate-900 transition ease-in-out hover:scale-105  w-md mx-auto shadow-md shadow-gray-500 rounded-md"
+        <section
+          className=" bg-slate-900  w-md mx-auto shadow-md shadow-gray-500 rounded-md"
         >
           <Image
             src="/images/northcoders06.png"
@@ -212,13 +131,10 @@ const page = () => {
               </p>
             </div>
           </section>
-        </motion.section>
+        </section>
 
-        <motion.section
-          variants={cardVariantsFour}
-          initial="hidden"
-          animate="visible"
-          className=" bg-slate-900 transition ease-in-out hover:scale-105 w-md mx-auto shadow-md shadow-gray-500 rounded-md"
+        <section
+          className=" bg-slate-900 w-md mx-auto shadow-md shadow-gray-500 rounded-md"
         >
           <Image
             src="/images/northcoders04.png"
@@ -240,14 +156,10 @@ const page = () => {
               </p>
             </div>
           </section>
-        </motion.section>
-      </section>
-
-      <section className="md:hidden justify-center m-auto">
-        <MobileCarousel northcodersStack={northcodersStack}/>
-      </section>
-    </main>
+        </section>
+      </Slider>
+    </div>
   );
 };
 
-export default page;
+export default MobileCarousel;
