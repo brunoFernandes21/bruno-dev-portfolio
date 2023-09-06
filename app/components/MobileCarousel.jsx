@@ -16,7 +16,7 @@ const MobileCarousel = ({ northcodersStack }) => {
   return (
     <div className=" text-center mx-auto mt-5 w-[90%] md:hidden text-white">
       <Slider {...settings}>
-        <section className=" bg-slate-900 mx-auto shadow-md shadow-gray-500 rounded-md ">
+        <section className=" bg-slate-900 mx-auto shadow-md rounded-md ">
           <Image
             src="/images/northcoders07.png"
             className="mx-auto rounded-t"
@@ -81,7 +81,7 @@ const MobileCarousel = ({ northcodersStack }) => {
         </section>
 
         <section
-          className=" bg-slate-900 w-md mx-auto shadow-md shadow-gray-500 rounded-md"
+          className=" bg-slate-900 w-md mx-auto shadow-md rounded-md"
         >
           <Image
             src="/images/northcoders05.png"
@@ -109,7 +109,7 @@ const MobileCarousel = ({ northcodersStack }) => {
         </section>
 
         <section
-          className=" bg-slate-900  w-md mx-auto shadow-md shadow-gray-500 rounded-md"
+          className=" bg-slate-900  w-md mx-auto shadow-md rounded-md"
         >
           <Image
             src="/images/northcoders06.png"
@@ -134,7 +134,7 @@ const MobileCarousel = ({ northcodersStack }) => {
         </section>
 
         <section
-          className=" bg-slate-900 w-md mx-auto shadow-md shadow-gray-500 rounded-md"
+          className=" bg-slate-900 w-md mx-auto shadow-md rounded-md"
         >
           <Image
             src="/images/northcoders04.png"
