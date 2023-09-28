@@ -66,12 +66,6 @@ const cardVariantsFour = {
   },
 };
 
-const slides = [
-  "/images/northcoders07.png",
-  "/images/northcoders03.png",
-  "/images/northcoders05.png",
-  "/images/northcoders06.png",
-];
 const page = () => {
   return (
     <main className="project__details min-h-screen py-5 px-5 md:p-10 lg-20">
