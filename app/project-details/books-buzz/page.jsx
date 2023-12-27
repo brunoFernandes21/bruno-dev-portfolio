@@ -72,7 +72,6 @@ const page = () => {
         </h1>
       </div>
       <section className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 w-full text-white gap-4 justify-center m-auto mt-4">
-
         <motion.section
           variants={cardVariantsOne}
           initial="hidden"

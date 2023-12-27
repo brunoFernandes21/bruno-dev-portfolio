@@ -17,7 +17,7 @@ const Projects = () => {
       <p className="text-xl text-slate-100 text-md py-2 leading-8">
         These projects demonstrate my expertise with practical examples of
         some of my work, including brief descriptions and links to code
-        repositories and live demos.
+        repositories and live demos. <a href="https://brunofer-projects.netlify.app" target="_blank" className="font-bold underline">Click here</a> to check out all the projects 
       </p>
     </div>
     <Carousel/>
