@@ -8,94 +8,8 @@ import { AiOutlineClose } from "react-icons/ai";
 
 
 import code from "/public/images/monitor_coding_2.png";
-import { motion } from "framer-motion";
-const navbarVariants = {
-  hidden: {
-    y: -250,
-  },
-  visible: {
-    y: 0,
-    transition: { delay: 0.2, type: "spring", stiffness: 120 },
-  },
-};
+// import { motion } from "framer-motion";
 
-const introVariants = {
-  hidden: {
-    opacity: 0,
-    rotate: -180,
-  },
-  visible: {
-    rotate: 0,
-    opacity: 1,
-    transition: {
-      delay: 1,
-      duration: 1.5,
-    },
-  },
-};
-const introTwoVariants = {
-  hidden: {
-    y: -250,
-    opacity: 0,
-  },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      delay: 2,
-      duration: 1,
-    },
-  },
-};
-const aboutMe = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      delay: 2,
-      duration: 1,
-    },
-  },
-};
-
-const buttonVariants = {
-  hidden: {
-    x: "-100vw",
-  },
-  visible: {
-    x: 0,
-    transition: {
-      delay: 3,
-      type: "spring",
-      stiffness: 120,
-    },
-  },
-  hover: {
-    scale: 1.1,
-    textShadow: "0px 0px 8px rgb(255,255,255)",
-    boxShadow: "0px 0px 8px rgb(255,255,255)",
-    transition: {
-      duration: 0.4,
-      yoyo: Infinity,
-    },
-  },
-};
-
-const homeImageVariants = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    x: [-20, 20, 0],
-    transition: {
-      delay: 4,
-      duration: 1.5,
-    },
-  },
-};
 
 const Home = () => {
   const [showNav, setShowNav] = useState(false);
@@ -117,11 +31,8 @@ const Home = () => {
   }
   return (
     <section id="home" className="min-h-screen md:px-20 lg:px-40 home">
-      <motion.nav
+      <nav
         className={`py-6 lg:flex lg:justify-between items-center border-b-2 relative`}
-        variants={navbarVariants}
-        initial="hidden"
-        animate="visible"
       >
         <div className="ml-4 text-slate-100 font-black text-xl md:text-xl lg:text-3xl">
           <p>Bruno.Dev</p>
@@ -193,60 +104,48 @@ const Home = () => {
         >
           <AiOutlineClose  />
         </button>}
-      </motion.nav>
+      </nav>
 
       <div className="text-center px-5">
-        <motion.h1
+        <h1
           className="text-3xl mt-6 md:mt-24 py-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-100 to-blue-500 font-black md:text-5xl"
-          variants={introVariants}
-          initial="hidden"
-          animate="visible"
         >
           Hello, I am Bruno Fernandes
-        </motion.h1>
+        </h1>
 
-        <motion.h3
+        <h3
           className="text-2xl pt-3 mt- text-slate-100 font-medium md:text-3xl"
-          variants={introTwoVariants}
-          initial="hidden"
-          animate="visible"
+
         >
           I am a Junior Software Developer
-        </motion.h3>
+        </h3>
 
-        <motion.p
+        <p
           className="text-lg text-slate-100 leading-8 max-w-xl mx-auto"
-          variants={introTwoVariants}
-          initial="hidden"
-          animate="visible"
+
         >
           With a passion for creating{" "}
           <strong className="text-2xl">beautiful</strong> and{" "}
           <strong className="text-2xl">functional</strong> web applications
           using <strong className="text-2xl">modern technology.</strong>
           <br />
-        </motion.p>
+        </p>
 
-        <motion.button
+        <button
           className="mt-10 text-md md:text-lg lg:text-xl p-3 px-6 md:p-3 md:px-6 text-slate-100 bg-gradient-to-r from-blue-400 to-blue-900 rounded-full "
-          variants={buttonVariants}
-          initial="hidden"
-          animate="visible"
-          whileHover="hover"
+
         >
           <strong>
             <a href="#about" className="">
               Find out more
             </a>
           </strong>
-        </motion.button>
+        </button>
       </div>
 
-      <motion.div
+      <div
         className="relative mx-auto mt-20 bg-gradient-to-b from-blue-500 rounded-full w-60 h-60 overflow-hidden md:h-80 md:w-80"
-        variants={homeImageVariants}
-        initial="hidden"
-        animate="visible"
+
       >
         <Image
           src={code}
@@ -255,7 +154,7 @@ const Home = () => {
           fill
           priority={true}
         />
-      </motion.div>
+      </div>
     </section>
   );
 };
